@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI/CD Demo Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h1>🚀 CI/CD Web Application</h1>
+
+            <p>
+                This application is deployed automatically using
+                GitHub Actions and Vercel.
+            </p>
+
+            <div class="status">
+                <span>✓</span>
+                Continuous Integration & Deployment Active
+            </div>
+
+            <button onclick="showMessage()">
+                Test Application
+            </button>
+
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").innerText =
+                "Deployment successful! 🎉";
+        }
+    </script>
+
+</body>
+</html>
