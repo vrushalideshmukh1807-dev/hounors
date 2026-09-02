@@ -1,41 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CI/CD Demo Application</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="app-container">
+    <header class="app-header">
+      <h1 id="app-title">Student Task Manager</h1>
+      <p class="subtitle">Organize your tasks. Stay productive.</p>
+    </header>
 
-    <div class="container">
-        <div class="card">
-            <h1>🚀 CI/CD Web Application</h1>
-
-            <p>
-                This application is deployed automatically using
-                GitHub Actions and Vercel.
-            </p>
-
-            <div class="status">
-                <span>✓</span>
-                Continuous Integration & Deployment Active
-            </div>
-
-            <button onclick="showMessage()">
-                Test Application
+    <main class="app-main">
+      <!-- Input Section -->
+      <section class="task-input-card">
+        <form id="task-form">
+          <div class="input-group">
+            <input 
+              type="text" 
+              id="task-input" 
+              placeholder="What do you need to study or complete?" 
+              autocomplete="off"
+              aria-label="New task input"
+            >
+            <button type="submit" id="add-task-btn" class="btn btn-primary">
+              <span>+ Add Task</span>
             </button>
+          </div>
+        </form>
+      </section>
 
-            <p id="message"></p>
+      <!-- Statistics Section -->
+      <section class="stats-section">
+        <div class="stat-card">
+          <span class="stat-value" id="total-count">0</span>
+          <span class="stat-label">Total Tasks</span>
         </div>
-    </div>
+        <div class="stat-card stat-pending">
+          <span class="stat-value" id="pending-count">0</span>
+          <span class="stat-label">Pending</span>
+        </div>
+        <div class="stat-card stat-completed">
+          <span class="stat-value" id="completed-count">0</span>
+          <span class="stat-label">Completed</span>
+        </div>
+      </section>
 
-    <script>
-        function showMessage() {
-            document.getElementById("message").innerText =
-                "Deployment successful! 🎉";
-        }
-    </script>
+      <!-- Task List Section -->
+      <section class="task-list-section">
+        <div id="empty-state" class="empty-state">
+          <div class="empty-icon">📝</div>
+          <h3>No tasks yet!</h3>
+          <p>Add your first study goal or task above to get started.</p>
+        </div>
 
+        <ul id="task-list" class="task-list"></ul>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>Student Task Manager &bull; CI/CD Assignment Project</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
