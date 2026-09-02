@@ -73,5 +73,6 @@ Hosted on Vercel's global CDN network for high performance and automatic HTTPS c
 Any push to the `main` branch automatically triggers the `.github/workflows/deploy.yml` workflow, rebuilding and updating the live site within seconds.
 
 ## Submission Details
-- **GitHub Repository**: <ADD_GITHUB_URL>
-- **Live Application**: <ADD_VERCEL_URL>
+- **GitHub Repository**: vrushalideshmukh1807-dev/hounor
+
+
